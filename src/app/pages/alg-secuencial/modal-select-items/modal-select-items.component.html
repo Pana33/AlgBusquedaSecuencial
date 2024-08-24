@@ -14,8 +14,8 @@
                 </div>
                 <hr class="text-black">
                 <div class="d-flex justify-content-center flex-wrap">
-                    @for (item of allItems; track $index) {
-                        <app-card-items [item]="item" [index]="-1"></app-card-items>
+                    @for (item of allItems; track index; let index = $index) {
+                        <app-card-items [item]="item" [index]="-1" (click)="addItemSelected(index)"></app-card-items>
                     }
                 </div>
             </div>

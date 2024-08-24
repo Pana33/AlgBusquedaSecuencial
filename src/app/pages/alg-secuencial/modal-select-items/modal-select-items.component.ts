@@ -82,4 +82,8 @@ export class ModalSelectItemsComponent {
     this.copyOfItemsSelected = [...this.itemsSelected]
   }
 
+  addItemSelected(index:number){
+    this.copyOfItemsSelected.push(this.allItems[index])
+  }
+
 }
