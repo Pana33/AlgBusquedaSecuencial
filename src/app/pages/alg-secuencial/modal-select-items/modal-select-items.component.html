@@ -1,1 +1,28 @@
-<p>modal-select-items works!</p>
+<button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#itemList" (click)="createCopyOfListItems()">
+    Modificar array
+</button>
+  
+<div class="modal fade" id="itemList" tabindex="-1">
+    <div class="modal-dialog modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-body">
+                <app-items-in-array [arrayItems]="copyOfItemsSelected"></app-items-in-array>
+                <hr class="text-black">
+                <div class="d-flex justify-content-around">
+                    <button class="btn btn-sm btn-danger" (click)="deleteItems()">Eliminar objetos</button>
+                    <button class="btn btn-sm btn-warning" (click)="addFiveRandomItems()">Agregar 5 objetos</button>
+                </div>
+                <hr class="text-black">
+                <div class="d-flex justify-content-center flex-wrap">
+                    @for (item of allItems; track $index) {
+                        <app-card-items [item]="item" [index]="-1"></app-card-items>
+                    }
+                </div>
+            </div>
+            <div class="modal-footer justify-content-around">
+                <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="modal" (click)="cancelChanges()">Cancelar</button>
+                <button type="button" class="btn btn-success btn-sm" data-bs-dismiss="modal" (click)="applyChanges()"[disabled]="copyOfItemsSelected.length === 0">Aplicar cambios</button>
+            </div>
+        </div>
+    </div>
+</div>
