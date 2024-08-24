@@ -1,5 +1,5 @@
 <div class="d-flex justify-content-center flex-wrap arrayContainer">
     @for (item of arrayItems; track index; let index = $index) {
-        <app-card-items [paintFooter]="index === itemToFind" [paintHeader]="index === currentLocation" [index]="index" [item]="item" (click)="selectItemToFind(index)"></app-card-items>
+        <app-card-items [paintFooter]="index === itemToFind" [paintHeader]="index === currentLocation" [index]="index" [item]="item"></app-card-items>
     }
 </div>

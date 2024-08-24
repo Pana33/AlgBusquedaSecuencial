@@ -11,17 +11,6 @@ import { CardItemsComponent } from '../card-items/card-items.component';
 export class ItemsInArrayComponent {
   currentLocation!:number
   @Input() arrayItems:string[] =[]
-  itemToFind:number = -1
-
-  selectItemToFind(item:number){
-    if(this.currentLocation != -1){
-      return
-    }
-    if(item === this.itemToFind){
-      this.itemToFind = -1
-    }else{
-      this.itemToFind = item
-    }
-  }
+  @Input() itemToFind:number = -1
 
 }
