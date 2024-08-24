@@ -1,10 +1,11 @@
 import { AfterViewInit, Component, ViewChild } from '@angular/core';
 import { ItemsInArrayComponent } from '../../shared/components/items-in-array/items-in-array.component';
+import { ModalSelectItemsComponent } from './modal-select-items/modal-select-items.component';
 
 @Component({
   selector: 'app-alg-secuencial',
   standalone: true,
-  imports: [ItemsInArrayComponent],
+  imports: [ItemsInArrayComponent, ModalSelectItemsComponent],
   templateUrl: './alg-secuencial.component.html',
   styleUrl: './alg-secuencial.component.scss'
 })
@@ -29,6 +30,11 @@ export class AlgSecuencialComponent implements AfterViewInit {
     setTimeout(()=>{
       this.itemsInArray.arrayItems = this.arrayItems
     },250)
+  }
+
+  setNewItems($event:string[]){
+    this.arrayItems = [...$event]
+    this.itemsInArray.arrayItems = this.arrayItems
   }
 
 }

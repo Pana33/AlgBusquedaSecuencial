@@ -3,7 +3,7 @@
         <div class="col-sm-12 col-md-8">
             <div class="row flex-column">
                 <div class="col-12 text-center py-3">
-                    <button class="btn btn-primary btn-sm">Modificar array</button>
+                    <app-modal-select-items [itemsSelected]="arrayItems" (newItems)="setNewItems($event)"></app-modal-select-items>
                 </div>
                 <div class="col-12 text-center py-3">
                     <p class="pb-4 fw-bold">Objetos en el array:</p>
