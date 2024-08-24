@@ -1,18 +1,16 @@
-import { NgClass } from '@angular/common';
 import { Component } from '@angular/core';
+import { CardItemsComponent } from '../card-items/card-items.component';
 
 @Component({
   selector: 'app-items-in-array',
   standalone: true,
-  imports: [NgClass],
+  imports: [CardItemsComponent],
   templateUrl: './items-in-array.component.html',
   styleUrl: './items-in-array.component.scss'
 })
 export class ItemsInArrayComponent {
-  currentLocation:number = -1
+  currentLocation!:number
   array:string[] =[]
-  readonly fileRoute:string = "../../../../assets/icons/"
-  readonly fileExtencion:string = ".svg"
   itemToFind:number = -1
 
   selectItemToFind(item:number){
