@@ -1,12 +1,34 @@
-import { Component } from '@angular/core';
+import { AfterViewInit, Component, ViewChild } from '@angular/core';
+import { ItemsInArrayComponent } from '../../shared/components/items-in-array/items-in-array.component';
 
 @Component({
   selector: 'app-alg-secuencial',
   standalone: true,
-  imports: [],
+  imports: [ItemsInArrayComponent],
   templateUrl: './alg-secuencial.component.html',
   styleUrl: './alg-secuencial.component.scss'
 })
-export class AlgSecuencialComponent {
+export class AlgSecuencialComponent implements AfterViewInit {
+  @ViewChild(ItemsInArrayComponent) itemsInArray!:ItemsInArrayComponent
+  currentItem = -1
+  arrayObjects:string[] = [
+    "air-plane",
+    "android",
+    "balloon",
+    "bug",
+    "cake",
+    "camera",
+    "clock",
+    "cloud",
+    "droplet",
+    "letter",
+  ]
+  
+  ngAfterViewInit(): void {
+    this.itemsInArray.currentLocation = this.currentItem
+    setTimeout(()=>{
+      this.itemsInArray.array = this.arrayObjects
+    },250)
+  }
 
 }
