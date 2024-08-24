@@ -11,7 +11,7 @@ import { ItemsInArrayComponent } from '../../shared/components/items-in-array/it
 export class AlgSecuencialComponent implements AfterViewInit {
   @ViewChild(ItemsInArrayComponent) itemsInArray!:ItemsInArrayComponent
   currentItem = -1
-  arrayObjects:string[] = [
+  arrayItems:string[] = [
     "air-plane",
     "android",
     "balloon",
@@ -27,7 +27,7 @@ export class AlgSecuencialComponent implements AfterViewInit {
   ngAfterViewInit(): void {
     this.itemsInArray.currentLocation = this.currentItem
     setTimeout(()=>{
-      this.itemsInArray.array = this.arrayObjects
+      this.itemsInArray.arrayItems = this.arrayItems
     },250)
   }
 

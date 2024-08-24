@@ -10,7 +10,7 @@ import { CardItemsComponent } from '../card-items/card-items.component';
 })
 export class ItemsInArrayComponent {
   currentLocation!:number
-  array:string[] =[]
+  arrayItems:string[] =[]
   itemToFind:number = -1
 
   selectItemToFind(item:number){

@@ -9,7 +9,7 @@ import { Component, Input } from '@angular/core';
   styleUrl: './card-items.component.scss'
 })
 export class CardItemsComponent {
-  @Input() object:string = ""
+  @Input() item:string = ""
   @Input() paintHeader:boolean = false
   @Input() paintFooter:boolean = false
   @Input() index!:number
