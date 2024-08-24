@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { CardItemsComponent } from '../card-items/card-items.component';
 
 @Component({
@@ -10,7 +10,7 @@ import { CardItemsComponent } from '../card-items/card-items.component';
 })
 export class ItemsInArrayComponent {
   currentLocation!:number
-  arrayItems:string[] =[]
+  @Input() arrayItems:string[] =[]
   itemToFind:number = -1
 
   selectItemToFind(item:number){
