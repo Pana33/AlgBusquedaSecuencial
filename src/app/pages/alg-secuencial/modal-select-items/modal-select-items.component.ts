@@ -11,6 +11,7 @@ import { ItemsInArrayComponent } from '../../../shared/components/items-in-array
 })
 export class ModalSelectItemsComponent {
   @Input() itemsSelected:string[] = []
+  @Input() disable:boolean = false
   @Output() newItems = new EventEmitter<string[]>
   copyOfItemsSelected:string[] = []
   allItems:string[] = [
