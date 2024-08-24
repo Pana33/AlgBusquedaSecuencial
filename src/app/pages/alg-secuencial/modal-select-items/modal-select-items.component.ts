@@ -73,7 +73,7 @@ export class ModalSelectItemsComponent {
   }
 
   applyChanges(){
-    if(this.copyOfItemsSelected.length === 0){
+    if(this.copyOfItemsSelected.length === 0 || this.disable){
       return
     }
     this.newItems.emit(this.copyOfItemsSelected)
