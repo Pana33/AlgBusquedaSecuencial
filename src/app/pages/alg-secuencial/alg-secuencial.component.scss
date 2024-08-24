@@ -35,3 +35,11 @@ p {
     margin: 0;
     display: inline-block;
 }
+
+.card {
+    overflow: auto;
+}
+
+.card-body {
+    min-width: 535px;
+}
