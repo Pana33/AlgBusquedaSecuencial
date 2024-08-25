@@ -12,50 +12,9 @@ import { ItemsInArrayComponent } from '../../../shared/components/items-in-array
 export class ModalSelectItemsComponent {
   @Input() itemsSelected:string[] = []
   @Input() disable:boolean = false
+  @Input() allItems:string[] = []
   @Output() newItems = new EventEmitter<string[]>
   copyOfItemsSelected:string[] = []
-  allItems:string[] = [
-    '0',
-    '1',
-    '2',
-    '3',
-    '4',
-    '5',
-    '6',
-    '7',
-    '8',
-    '9',
-    'air-plane',
-    'android',
-    'balloon',
-    'bug',
-    'bus',
-    'cake',
-    'camera',
-    'clock',
-    'cloud',
-    'clover',
-    'droplet',
-    'letter',
-    'moon',
-    'pencil',
-    'phone',
-    'piggy',
-    'printer',
-    'rocket',
-    'shield',
-    'snowflake',
-    'star',
-    'suitcase',
-    'sun',
-    'trash',
-    'trophy',
-    'twitter',
-    'umbrella',
-    'windows',
-    'xbox',
-    'ying-yang',
-  ]
 
   deleteItems(){
     this.copyOfItemsSelected = []

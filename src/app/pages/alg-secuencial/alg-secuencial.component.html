@@ -3,11 +3,21 @@
         <div class="col-sm-12 col-md-8">
             <div class="row flex-column">
                 <div class="col-12 text-center py-3">
-                    <app-modal-select-items [itemsSelected]="arrayItems" [disable]="currentItem >= 0" (newItems)="setNewItems($event)"></app-modal-select-items>
-                </div>
-                <div class="col-12 text-center py-3">
                     <p class="pb-4 fw-bold">Objetos en el array:</p>
                     <app-items-in-array></app-items-in-array>
+                </div>
+                <div class="col-12 text-center py-3">
+                    <div class="row align-items-center">
+                        <div class="col-4 text-center">
+                            <app-modal-select-items [itemsSelected]="arrayDefaultItems" [disable]="currentItem >= 0" [allItems]="allItems" (newItems)="setNewItems($event)"></app-modal-select-items>
+                        </div>
+                        <div class="col-4 text-center">
+                            <app-modal-item-to-find [allItems]="allItems" [disable]="currentItem >= 0" (indexItem)="selectItemToFind($event)"></app-modal-item-to-find>
+                        </div>
+                        <div class="col-4 text-center">
+
+                        </div>
+                    </div>
                 </div>
                 <div class="col-12 d-flex justify-content-center py-3">
                     <div class="card bg-black">
