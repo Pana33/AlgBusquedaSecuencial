@@ -127,20 +127,20 @@ export class AlgSecuencialComponent implements AfterViewInit {
   }
 
   callFunction(){
-    console.log("callFunction")
+    // console.log("callFunction")
     this.currentStep = 1
     this.itemFinded = null
     //this.setDefatulPosition()
   }
   
   setDefatulPosition(){
-    console.log("setDefatulPosition")
+    // console.log("setDefatulPosition")
     this.currentStep = 2
     //this.setLoop()
   }
 
   setLoop(){
-    console.log("setLoop")
+    // console.log("setLoop")
     this.currentItem += 1
     if(this.arrayDefaultItems.length <= this.currentItem){
       this.currentStep = 7
@@ -152,7 +152,7 @@ export class AlgSecuencialComponent implements AfterViewInit {
   }
 
   compareResults(){
-    console.log("compareResults")
+    // console.log("compareResults")
     if(this.arrayDefaultItems[this.currentItem] === this.allItems[this.indexItemSelectedToFind]){
       this.currentStep = 4
       //this.setNewPosition()
@@ -163,25 +163,25 @@ export class AlgSecuencialComponent implements AfterViewInit {
   }
 
   setNewPosition(){
-    console.log("setNewPosition")
+    // console.log("setNewPosition")
     this.currentStep = 5
     //this.breakTheLoop()
   }
 
   breakTheLoop(){
-    console.log("breakTheLoop")
+    // console.log("breakTheLoop")
     this.currentStep = 7
     //this.goOutSetLoop()
   }
 
   goOutCompareResults(){
-    console.log("goOutCompareResults")
+    // console.log("goOutCompareResults")
     this.currentStep = 7
     //this.goOutSetLoop()
   }
 
   goOutSetLoop(){
-    console.log("goOutSetLoop")
+    // console.log("goOutSetLoop")
     if(this.arrayDefaultItems.length <= this.currentItem || this.arrayDefaultItems[this.currentItem] === this.allItems[this.indexItemSelectedToFind]){
       this.currentStep = 8
       //this.returnPosition()
@@ -199,7 +199,7 @@ export class AlgSecuencialComponent implements AfterViewInit {
     }else{
       this.itemFinded = false
     }
-    console.log("returnPosition")
+    // console.log("returnPosition")
     this.resetValues()
   }
 
