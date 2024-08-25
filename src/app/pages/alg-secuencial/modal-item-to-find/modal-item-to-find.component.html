@@ -1,0 +1,24 @@
+<button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#itemToFind" [disabled]="disable">
+    @if (itemSelected === -1) {
+        Selecciona un objeto
+    }@else {
+        <app-card-items [index]="-1" [item]="allItems[itemSelected]"></app-card-items>
+    }
+</button>
+  
+<div class="modal fade" id="itemToFind" tabindex="-1">
+    <div class="modal-dialog modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="d-flex justify-content-center flex-wrap">
+                    @for (item of allItems; track index; let index = $index) {
+                        <app-card-items [item]="item" [index]="-1" (click)="selectItemToFind(index)"></app-card-items>
+                    }
+                </div>
+            </div>
+            <div class="modal-footer justify-content-around">
+                <button type="button" class="btn btn-secondary btn-sm" [id]="idCloseButton" data-bs-dismiss="modal">Cancelar</button>
+            </div>
+        </div>
+    </div>
+</div>
