@@ -48,3 +48,13 @@ p {
     width: 100%;
     max-width: 535px;
 }
+
+.pointerStep {
+    width: 100%; 
+    height: calc(1rem + 5px);
+    background-color: rgba(255, 255, 0, 0.274);
+    position: absolute; 
+    top: calc(-1rem - 5px);
+    right: 0;
+    transition: all 1s ease-out;
+}
