@@ -9,7 +9,7 @@ import { CardItemsComponent } from '../card-items/card-items.component';
   styleUrl: './items-in-array.component.scss'
 })
 export class ItemsInArrayComponent {
-  currentLocation!:number
+  @Input() currentLocation!:number
   @Input() arrayItems:string[] =[]
   @Input() itemToFind:number = -1
 
