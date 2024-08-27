@@ -94,7 +94,7 @@ export class AlgSecuencialComponent implements AfterViewInit {
     if(this.indexItemSelectedToFind === -1){
       return
     }
-    document.getElementById("pointerStep")!.style.top = this.currentStep === 0 ? '18px' : `${18 + this.currentStep * 24.25}px`
+    document.getElementById("pointerStep")!.style.top = this.currentStep === 0 ? '18px' : `${18 + this.currentStep * 24.1}px`
     switch(this.currentStep){
       case 0:
         this.callFunction()
